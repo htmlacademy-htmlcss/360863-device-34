@@ -126,6 +126,11 @@ body {
     font-family: inherit;
     font-size: 16px;
     line-height: 20px;
+    background-color: #ffe17f;
+}
+
+.header-search-input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .header-search-input::placeholder {
