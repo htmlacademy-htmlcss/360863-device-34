@@ -975,7 +975,6 @@ body {
     display: flex;
     margin: 0 auto;
     width: 1160px;
-    /*background-color: rgba(0, 0, 0, 0.2);*/
 }
 
 .features-list-toggle {
@@ -1047,20 +1046,20 @@ body {
 }
 
 .features-item {
+    width: 694px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /*!!!!!!!!!!!!!!!!!!!! почему не работает?!!!!!!!!!!!!!!!!!!!*/
+    justify-content: space-between;
 }
 
 .feature-item-image {
     object-fit: contain;
     vertical-align: top;
-    /*margin-left: 106px;*/
     transform: translateY(3px);
 }
 
 .features-item-text-wrapper {
-    width: 452px;
+    width: 475px;
 }
 
 .features-item-title {
