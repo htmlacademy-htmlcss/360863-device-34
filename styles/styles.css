@@ -920,10 +920,7 @@ body {
 }
 
 .categories-item {
-    display: flex;
     width: 160px;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .categories-item:not(:nth-child(6n)) {
@@ -995,7 +992,6 @@ body {
 .features-toggle-button {
     display: block;
     position: relative;
-    width: 160px;
     padding: 10px 0;
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -1006,10 +1002,15 @@ body {
     font-weight: 800;
     font-size: 18px;
     line-height: 21px;
-    text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     z-index: 2;
+}
+
+.features-toggle-button-text {
+    display: block;
+    width: 160px;
+    text-align: center;
 }
 
 .features-toggle-button:after {
@@ -1023,13 +1024,16 @@ body {
     z-index: -1;
 }
 
-.features-item-toggle.current {
-    background-color: #000000;
+.features-item-toggle.current .features-toggle-button {
+    width: 100%;
     color: #ffe17f;
+    background-color: #000000;
+    text-align: left;
 }
 
-.features-item-toggle.current .features-toggle-button {
-    color: #ffe17f;
+.features-item-toggle.current .features-toggle-button:focus-visible {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
 }
 
 .features-item-toggle.current .features-toggle-button:after {
@@ -1046,16 +1050,47 @@ body {
 }
 
 .features-item {
+    position: relative;
     width: 694px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.feature-item-image {
-    object-fit: contain;
-    vertical-align: top;
-    transform: translateY(3px);
+.features-item.delivery .features-item-text-wrapper::after {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 100px);
+    width: 180px;
+    height: 200px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url("../images/delivery.png");
+}
+
+.features-item.guaranty .features-item-text-wrapper::after {
+    position: absolute;
+    top: calc(50% - 100px);
+    width: 180px;
+    height: 200px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url("../images/guaranty.png");
+    right: -35px;
+}
+
+.features-item.credit .features-item-text-wrapper::after {
+    position: absolute;
+    top: calc(50% - 100px);
+    width: 180px;
+    height: 200px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url("../images/credit.png");
+    right: -35px;
 }
 
 .features-item-text-wrapper {
@@ -1095,9 +1130,9 @@ body {
     background-color: #ffcc33;
 }
 
-.features-toggle-button:active ~ .features-toggle-button:after {
+.features-toggle-button:active::after {
     background-color: #ffcc33;
-} /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
 
 .features-item-toggle.current .features-toggle-button:hover {
     background-color: #000000;
@@ -1108,15 +1143,6 @@ body {
     background-color: #000000;
     opacity: 0.3;
 }
-
-.features-item-toggle.current .features-toggle-button:focus-visible {
-    outline: none;
-}
-
-.features-item-toggle.current:focus-within {
-    outline: 2px solid #7b61ff;
-    outline-offset: -1px;
-}   /*!!!!!!!!!!!!!!!!!!!!!!!! как сделать чтобы при акивной кнопке не было фокуса?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .features-toggle-button.disabled {
     opacity: 0.1;
