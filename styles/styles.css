@@ -938,7 +938,17 @@ body {
     color: #000000;
 }
 
-.categories-link:focus-visible {
+/*.categories-link:focus-visible {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}*/
+
+.categories-link:focus-visible,
+.categories-title:focus-visible {
+    outline:none;
+}
+
+.categories-item:focus-within {
     outline: 2px solid #7b61ff;
     outline-offset: 2px;
 }
@@ -976,7 +986,7 @@ body {
 
 .features-list-toggle {
     margin: 0 0 72px 0;
-    padding: 64px 0 65px 0;
+    padding: 64px 0 62px 0;
     list-style-type: none;
     border-right: 7px solid #000000;
 }
@@ -1148,4 +1158,85 @@ body {
     opacity: 0.1;
     cursor: inherit;
     z-index: -1;
+}
+
+.promo {
+    position: relative;
+    margin: 68px auto 0 auto;
+    width: 1160px;
+}
+
+.promo-button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding: 40px 150px 40px 150px;
+    margin: 0;
+    width: 100%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+
+}
+
+.promo-button::before {
+    width: 125px;
+    height: 100%;
+    content: "";
+    background-image: url("../images/car.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffe17f;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.promo-information {
+    position: absolute;
+    right: 44px;
+    top: calc(50% - 20px);
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(220, 220, 220, 0.5);
+}
+
+.promo-information::after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../images/promo-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+}
+
+.promo-button:focus-visible {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}
+
+.promo-button:hover::before {
+    background-color: #ffc700;
+}
+
+.promo-button:hover .promo-information::after {
+    opacity: 1;
+}
+
+.promo:active {
+    opacity: 0.3;
 }
