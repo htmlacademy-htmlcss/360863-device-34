@@ -943,10 +943,15 @@ body {
     outline:none;
 }
 
-.categories-item:focus-within {
+.categories-link:focus-within {
     outline: 2px solid #7b61ff;
     outline-offset: 2px;
 }
+
+/*.categories-item:focus-within {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}*/
 
 .categories-link:hover .categories-image {
     background-color: #ffc700;
