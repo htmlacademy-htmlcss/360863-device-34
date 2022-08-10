@@ -1872,7 +1872,7 @@ body {
 }
 
 .category-title {
-    margin: 35px 0 0 0;
+    margin: 37px 0 0 0;
     padding-left: 60px;
     padding-right: 21px;
     font-family: 'Raleway', sans-serif;
@@ -1953,7 +1953,7 @@ body {
 
 .filter-title {
     display: inline-block;
-    margin: 25px 0 59px 0;
+    margin: 25px 0 57px 0;
     padding-left: 60px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -2040,21 +2040,21 @@ body {
 
 .range-button-min {
     position: absolute;
-    left: -8px;
-    top: -21px;
+    left: -18px;
+    top: -20px;
 }
 
 .range-button-max {
     position: absolute;
-    right: -10px;
-    top: -21px;
+    right: -18px;
+    top: -20px;
 }
 
 .minprice-label {
     display: block;
-    width: 75px;
+    width: 85px;
     margin-top: 7px;
-    margin-left: -3px;
+    margin-left: -5px;
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -2065,11 +2065,10 @@ body {
 }
 
 .maxprice-label {
-    position: absolute;
     display: block;
-    width: 75px;
-    margin-top: 4px;
-    margin-left: -20px;
+    width: 105px;
+    margin-top: 3px;
+    margin-left: -23px;
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -2077,6 +2076,85 @@ body {
     line-height: 18px;
     color: #000000;
     opacity: 0.3;
+}
+
+.filter-price-input-min {
+    display: inline;
+    width: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+
+}
+
+.filter-price-input-min::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.filter-pricemin-input-wrapper {
+    position: absolute;
+}
+
+.filter-pricemax-input-wrapper {
+    position: absolute;
+}
+
+.filter-pricemin-input-wrapper::after {
+    display: none;
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    width: 100%;
+    height: 10px;
+    content: "";
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}
+
+.filter-pricemax-input-wrapper::after {
+    display: none;
+    position: absolute;
+    top: 8px;
+    left: -23px;
+    width: 100%;
+    height: 10px;
+    content: "";
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}
+
+.filter-pricemin-input-wrapper:focus-within::after,
+.filter-pricemax-input-wrapper:focus-within::after {
+    display: block;
+}
+
+.filter-price-input-min:focus-visible,
+.filter-price-input-max:focus-visible {
+    outline: none;
+}
+
+.filter-price-input-max {
+    display: inline;
+    width: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.filter-price-input-max::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .filter-fieldset {
@@ -2108,7 +2186,7 @@ body {
 
 .control-checkbox {
     position: absolute;
-    top: 4px;
+    top: 6px;
     left: 0;
     box-sizing: border-box;
     width: 20px;
@@ -2136,13 +2214,13 @@ body {
 }
 
 .filter-fieldset.bluetooth {
-    margin-top: 21px;
+    margin-top: 22px;
     padding-left: 58px;
 }
 
 .control-radio {
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 0;
     width: 20px;
     height: 20px;
@@ -2164,6 +2242,37 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-color: #000000;
+}
+
+.filter-fieldset-item:hover label {
+    opacity: 0.6;
+}
+
+.filter-fieldset-item:active label {
+    opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:disabled ~ .control-checkbox,
+.control-input[type="checkbox"]:disabled ~ .control-label {
+    opacity: 0.1;
+}
+
+.control-input[type="radio"]:disabled ~ .control-radio,
+.control-input[type="radio"]:disabled ~ .control-label {
+    opacity: 0.1;
+}
+
+.control-input[type="checkbox"]:focus + .control-checkbox::after,
+.control-input[type="radio"]:focus + .control-radio::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: block;
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
 }
 
 .filter-button-submit {

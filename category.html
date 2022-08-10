@@ -134,20 +134,26 @@
             <fieldset class="filter-fieldset cost">
               <legend class="filter-fieldset-title">Стоимость</legend>
               <div class="range">
-                <div class="range-bar" style="left: 0; width: 119px">
+                <div class="range-bar" style="left: 11px; width: 101px">
                   <div class="range-button-min">
                     <button class="range-toggle" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <label class="minprice-label" for="minprice">от 0</label>
-                    <input class="filter-price-input visually-hidden" id="minprice" type="number" min="0" max="5000" value="0" name="min-price">
+                    <div class="filter-pricemin-input-wrapper">
+                      <label class="minprice-label">от
+                        <input class="filter-price-input filter-price-input-min" type="number" min="0" max="5000" value="0" name="min-price">
+                      </label>
+                    </div>
                   </div>
                   <div class="range-button-max">
                     <button class="range-toggle" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
-                    <label class="maxprice-label" for="maxprice">до 5000</label>
-                    <input class="filter-price-input filter-price-input-max visually-hidden" id="maxprice" type="number" min="0" max="5000" value="4500" name="max-price">
+                    <div class="filter-pricemax-input-wrapper">
+                      <label class="maxprice-label">до
+                        <input class="filter-price-input filter-price-input-max" type="number" min="0" max="5000" value="5000" name="max-price">
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
