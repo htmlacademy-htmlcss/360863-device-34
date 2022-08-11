@@ -394,8 +394,53 @@
     </div>
   </div>
 </footer>
+<div class="modal-container modal-container-close">
+  <div class="modal modal-search">
+    <button class="modal-close-button" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Доставка под заказ</h2>
+      <form class="modal-search-form" method="post" action="https://echo.htmlacademy.ru/">
+        <div class="modal-input-wrapper name">
+          <label class="name-label" for="modal-name">Ваше имя:</label>
+          <input class="name-input" type="text" id="modal-name" name="name" value="" placeholder="Введите имя" required>
+          <span class="name-input-icon"></span>
+          <span class="hint name-hint">Добавьте имя</span>
+        </div>
+        <div class="modal-input-wrapper email">
+          <label class="email-label" for="modal-email">Ваш e-mail:</label>
+          <input class="email-input" type="email" id="modal-email" name="email" value="почта" placeholder="Ваш e-mail" required>
+          <span class="email-input-icon"></span>
+          <span class="hint error-hint">Забавный у вас адрес</span>
+        </div>
+        <div class="modal-input-wrapper order-description">
+          <label class="order-description-label" for="order-description">Что нужно привезти:</label>
+          <input class="order-description-input" type="text" id="order-description" name="order-description" value="" placeholder="В свободной форме" required>
+        </div>
+        <div class="modal-input-wrapper">
+          <div class="quantity-label-wrapper">
+            <label class="quantity-label" for="modal-quantity">Количество:</label>
+            <span class="modal-tooltip">
+            <span class="modal-tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по&nbsp;требованиям к&nbsp;провозу багажа.</span>
+            </span>
+          </div>
+          <div class="input-quantity-wrapper">
+            <input class="quantity-input" type="number" id="modal-quantity" name="quantity" value="1" placeholder="">
+            <div class="quantity-input-buttons">
+              <button class="button-minus" type="button">
+                <span class="visually-hidden">Уменьшить.</span>
+              </button>
+              <button class="button-plus" type="button">
+                <span class="visually-hidden">Увеличить.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="modal-form-button" type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
+</div>
 </body>
 </html>
-
-
-

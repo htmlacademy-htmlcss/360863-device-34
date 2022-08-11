@@ -506,7 +506,7 @@ body {
 
 .tooltip {
     position: absolute;
-    z-index: 6;
+    z-index: 7;
     content: "";
     width: 320px;
     left: -116px;
@@ -1549,6 +1549,7 @@ body {
     border-right: none;
     border-left: none;
     border-top: none;
+    box-sizing: border-box;
     border-bottom: 3px solid #c4c4c4;
     background-color: rgba(0, 0, 0, 0);
     padding-left: 16px;
@@ -2762,4 +2763,487 @@ body {
     outline: 2px solid #7b61ff;
     outline-offset: 2px;
     opacity: 1;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+    display: none;
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding: 62px 70px;
+    background-color: #ffffff;
+}
+
+.modal-search {
+    width: 920px;
+    box-sizing: border-box;
+    border: 10px solid #000000;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 70px;
+    top: 74px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/icons/modal-close-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-close-button:focus {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}
+
+.modal-close-button:hover {
+    opacity: 0.6;
+}
+
+.modal-close-button:active {
+    opacity: 0.3;
+    outline: none;
+}
+
+.modal-title {
+    margin: 0 0 42px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.name-label {
+    margin-bottom: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.name-input {
+    width: 360px;
+    height: 60px;
+    margin-right: 40px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 18px 24px 20px 20px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.name-input::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.hint {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.name-hint {
+    display: none;
+}
+
+.email-label {
+    margin-bottom: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.email-input {
+    width: 360px;
+    height: 60px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 18px 24px 20px 20px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.email-input:invalid,
+.quantity-input:invalid,
+.subscription-input-email:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF3D3D;
+}
+
+.email-input::placeholder,
+.quantity-input::placeholder,
+.order-description-input::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.hint.error-hint {
+    color: #ff3d3d;
+}
+
+.order-description-label {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.order-description-input {
+    width: 540px;
+    height: 60px;
+    margin-right: 40px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 20px 24px 20px 20px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.order-description::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.modal-input-wrapper.order-description {
+    margin-bottom: 42px;
+}
+
+.input-quantity-wrapper {
+    position: relative;
+    width: 180px;
+}
+
+.quantity-label-wrapper {
+    position: relative;
+    margin-bottom: 14px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.quantity-label {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.modal-tooltip {
+    position: absolute;
+    top: -4px;
+    right: 35px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #ffe17f;
+    background-image: url("../images/promo-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-tooltip-text {
+    position: absolute;
+    display: none;
+    width: 200px;
+    background-color: #000000;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 19px 17px 19px 19px;
+    z-index: 1;
+    top: 37px;
+    right: -34px;
+}
+
+.modal-tooltip-text::before {
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 7px;
+    top: -6px;
+    right: 40px;
+    content: "";
+    background-image: url("../images/icons/tooltip-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-tooltip:hover .modal-tooltip-text {
+    display: block;
+}
+
+.quantity-input {
+    width: 180px;
+    height: 60px;
+    padding-left: 18px;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.button-minus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.button-minus::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: block;
+    top: 0;
+    background-image: url("../images/icons/quantity-minus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.button-plus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button-plus::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: block;
+    top: 0;
+    right: 0;
+    background-image: url("../images/icons/quantity-plus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button-minus:hover:after,
+.button-plus:hover:after {
+    opacity: 0.6;
+    background-color: #ebebeb;
+}
+
+.button-minus:active:after,
+.button-plus:active:after {
+    opacity: 0.3;
+}
+
+.button-minus:disabled,
+.button-plus:disabled {
+    opacity: 0.3;
+}
+
+.modal-form-button {
+    display: inline-block;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #ffe17f 40%, #ffe17f 60%, rgba(0, 0, 0, 0) 60%);
+    border: none;
+    width: 200px;
+    min-height: 40px;
+    margin-top: 0;
+    padding-right: 1px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.modal-form-button:focus-visible {
+    outline: 2px solid #7b61ff;
+}
+
+.modal-form-button:hover {
+    background: linear-gradient(to bottom, #ffe17f 0%, #ffe17f 100%);
+}
+
+.modal-form-button:active {
+    background: linear-gradient(to bottom, #ffcc33 0%, #ffcc33 100%);
+}
+
+.modal-form-button:disabled {
+    opacity: 0.3;
+}
+
+.modal-input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input-wrapper.name,
+.modal-input-wrapper.email {
+    margin-bottom: 62px;
+}
+
+.modal-search-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name-input:hover,
+.email-input:hover,
+.order-description-input:hover {
+    background-color: #dcdcdc;
+}
+
+.input-quantity-wrapper:hover .quantity-input,
+.input-quantity-wrapper:hover .button-minus,
+.input-quantity-wrapper:hover .button-plus {
+    background-color: #dcdcdc;
+}
+
+.quantity-input:disabled ~ .quantity-input-buttons {
+    opacity: 0;
+}
+
+.name-input:not(:placeholder-shown),
+.email-input:not(:placeholder-shown),
+.order-description-input:not(:placeholder-shown) {
+    background-color: #ebebeb;
+}
+
+.name-input:disabled,
+.email-input:disabled,
+.order-description-input:disabled,
+.quantity-input:disabled {
+    opacity: 0.3;
+    background-color: #f0f0f0;
+}
+
+.name-input-icon {
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 12px;
+    content: "";
+    background-image: url("../images/icons/name-input-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 25px;
+    right: 61px;
+}
+
+.email-input-icon {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 12px;
+    content: "";
+    background-image: url("../images/icons/email-input-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 25px;
+    right: 20px;
+}
+
+.name-input:focus-visible,
+.email-input:focus-visible,
+.order-description-input:focus-visible,
+.quantity-input:focus-visible {
+    outline: 2px solid #7b61ff;
+    outline-offset: 2px;
+}
+
+.modal-container-close {
+    display: none;
 }
