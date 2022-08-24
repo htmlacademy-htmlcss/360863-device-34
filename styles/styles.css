@@ -949,11 +949,6 @@ body {
     outline-offset: 2px;
 }
 
-/*.categories-item:focus-within {
-    outline: 2px solid #7b61ff;
-    outline-offset: 2px;
-}*/
-
 .categories-link:hover .categories-image {
     background-color: #ffc700;
 }
@@ -2183,6 +2178,10 @@ body {
 
 .filter-fieldset-list.color .filter-fieldset-item {
     position: relative;
+}
+
+.control {
+    display: block;
     padding-left: 36px;
     padding-bottom: 7px;
 }
@@ -2191,6 +2190,7 @@ body {
     position: absolute;
     top: 6px;
     left: 0;
+    display: block;
     box-sizing: border-box;
     width: 20px;
     height: 20px;
@@ -2236,8 +2236,6 @@ body {
 
 .filter-fieldset-list.bluetooth .filter-fieldset-item {
     position: relative;
-    padding-left: 36px;
-    padding-bottom: 10px;
 }
 
 .control-input[type="radio"]:checked + .control-radio {
@@ -2287,7 +2285,7 @@ body {
     border: none;
     padding: 10px 0;
     min-width: 220px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
@@ -2584,7 +2582,7 @@ body {
     text-align: right;
     width: 83px;
     margin: 32px 0 0 0;
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -2659,7 +2657,6 @@ body {
     line-height: 20px;
     text-align: center;
     color: rgba(68, 68, 68, 0.3);
-
 }
 
 .pagination-items:first-child {
@@ -2685,8 +2682,6 @@ body {
     text-decoration: none;
     opacity: 1;
 }
-
-
 
 .pagination-items:last-child .pagination-link {
     width: 141px;
@@ -2775,7 +2770,6 @@ body {
     opacity: 1;
 }
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .modal-container {
     position: fixed;
     top: 0;
