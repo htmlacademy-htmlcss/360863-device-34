@@ -186,10 +186,18 @@ body {
     outline-offset: 2px;
 }
 
-.header-search-button-wrapper:focus-within {
+.header-search-button:focus-visible:before {
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    content: '';
+    height: 40px;
+    width: 159px;
     outline: 2px solid #7b61ff;
     outline-offset: 2px;
 }
+
 
 .header-search-button:focus-visible,
 .header-search-button:focus {
