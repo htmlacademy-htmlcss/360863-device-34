@@ -2652,6 +2652,14 @@ body {
 
 .pagination-items {
     position: relative;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(68, 68, 68, 0.3);
+
 }
 
 .pagination-items:first-child {
@@ -2677,6 +2685,8 @@ body {
     text-decoration: none;
     opacity: 1;
 }
+
+
 
 .pagination-items:last-child .pagination-link {
     width: 141px;
@@ -3128,6 +3138,11 @@ body {
     opacity: 0.3;
 }
 
+.button-minus:focus-visible,
+.button-plus:focus-visible {
+    outline: 2px solid #7b61ff;
+}
+
 .modal-form-button {
     display: inline-block;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #ffe17f 40%, #ffe17f 60%, rgba(0, 0, 0, 0) 60%);
@@ -3180,6 +3195,10 @@ body {
     flex-wrap: wrap;
 }
 
+.email-input:placeholder-shown {
+    border: none;
+}
+
 .name-input:hover,
 .email-input:hover,
 .order-description-input:hover {
@@ -3195,6 +3214,8 @@ body {
 .quantity-input:disabled ~ .quantity-input-buttons {
     opacity: 0;
 }
+
+
 
 .name-input:not(:placeholder-shown),
 .email-input:not(:placeholder-shown),
@@ -3238,10 +3259,13 @@ body {
 
 .name-input:focus-visible,
 .email-input:focus-visible,
-.order-description-input:focus-visible,
-.quantity-input:focus-visible {
+.order-description-input:focus-visible {
     outline: 2px solid #7b61ff;
     outline-offset: 2px;
+}
+
+.quantity-input:focus-visible {
+    outline: none;
 }
 
 .modal-container-close {
