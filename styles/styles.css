@@ -2230,11 +2230,11 @@ body {
   border-color: #000000;
 }
 
-.filter-fieldset-item:hover label {
+.control:hover {
   opacity: 0.6;
 }
 
-.filter-fieldset-item:active label {
+.control:active {
   opacity: 0.3;
 }
 
