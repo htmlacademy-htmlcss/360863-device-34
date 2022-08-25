@@ -1592,6 +1592,7 @@ body {
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .subscription-button:focus {
@@ -2075,11 +2076,6 @@ body {
   color: #000000;
 }
 
-.filter-price-input-min::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .filter-pricemin-input-wrapper {
   position: absolute;
 }
@@ -2135,9 +2131,20 @@ body {
   color: #000000;
 }
 
+.filter-price-input-min::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
 .filter-price-input-max::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: textfield;
   margin: 0;
+}
+
+.filter-price-input {
+  -moz-appearance: textfield;
 }
 
 .filter-fieldset {
