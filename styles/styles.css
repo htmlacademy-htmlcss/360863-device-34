@@ -655,7 +655,7 @@ body {
 
 .slider {
   position: relative;
-  z-index: 4;
+  z-index: 2;
   margin: -150px auto 0 auto;
   width: 1160px;
 }
