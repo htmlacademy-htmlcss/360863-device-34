@@ -1154,7 +1154,7 @@ body {
 
 .promo {
   position: relative;
-  margin: 68px auto 0 auto;
+  margin: 71px auto 0 auto;
   width: 1160px;
 }
 
@@ -1162,14 +1162,14 @@ body {
   position: relative;
   display: block;
   box-sizing: border-box;
-  padding: 40px 150px 40px 150px;
+  padding: 40px 150px 36px 153px;
   margin: 0;
   width: 100%;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 25px;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1535,7 +1535,7 @@ body {
 }
 
 .subscription-input-email {
-  width: 527px;
+  width: 557px;
   border-right: none;
   border-left: none;
   border-top: none;
@@ -1592,6 +1592,9 @@ body {
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-bottom: 3px;
   background-color: rgba(0, 0, 0, 0);
 }
 
